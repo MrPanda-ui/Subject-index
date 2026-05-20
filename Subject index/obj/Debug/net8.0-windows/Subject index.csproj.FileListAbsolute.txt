@@ -1,0 +1,16 @@
+C:\Users\peten\OneDrive\Рабочий стол\Kazinak\Kazino\Subject index\Subject index\bin\Debug\net8.0-windows\Subject index.exe
+C:\Users\peten\OneDrive\Рабочий стол\Kazinak\Kazino\Subject index\Subject index\bin\Debug\net8.0-windows\Subject index.deps.json
+C:\Users\peten\OneDrive\Рабочий стол\Kazinak\Kazino\Subject index\Subject index\bin\Debug\net8.0-windows\Subject index.runtimeconfig.json
+C:\Users\peten\OneDrive\Рабочий стол\Kazinak\Kazino\Subject index\Subject index\bin\Debug\net8.0-windows\Subject index.dll
+C:\Users\peten\OneDrive\Рабочий стол\Kazinak\Kazino\Subject index\Subject index\bin\Debug\net8.0-windows\Subject index.pdb
+C:\Users\peten\OneDrive\Рабочий стол\Kazinak\Kazino\Subject index\Subject index\obj\Debug\net8.0-windows\Subject_index.Form1.resources
+C:\Users\peten\OneDrive\Рабочий стол\Kazinak\Kazino\Subject index\Subject index\obj\Debug\net8.0-windows\Subject index.csproj.GenerateResource.cache
+C:\Users\peten\OneDrive\Рабочий стол\Kazinak\Kazino\Subject index\Subject index\obj\Debug\net8.0-windows\Subject index.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\peten\OneDrive\Рабочий стол\Kazinak\Kazino\Subject index\Subject index\obj\Debug\net8.0-windows\Subject index.AssemblyInfoInputs.cache
+C:\Users\peten\OneDrive\Рабочий стол\Kazinak\Kazino\Subject index\Subject index\obj\Debug\net8.0-windows\Subject index.AssemblyInfo.cs
+C:\Users\peten\OneDrive\Рабочий стол\Kazinak\Kazino\Subject index\Subject index\obj\Debug\net8.0-windows\Subject index.csproj.CoreCompileInputs.cache
+C:\Users\peten\OneDrive\Рабочий стол\Kazinak\Kazino\Subject index\Subject index\obj\Debug\net8.0-windows\Subject index.dll
+C:\Users\peten\OneDrive\Рабочий стол\Kazinak\Kazino\Subject index\Subject index\obj\Debug\net8.0-windows\refint\Subject index.dll
+C:\Users\peten\OneDrive\Рабочий стол\Kazinak\Kazino\Subject index\Subject index\obj\Debug\net8.0-windows\Subject index.pdb
+C:\Users\peten\OneDrive\Рабочий стол\Kazinak\Kazino\Subject index\Subject index\obj\Debug\net8.0-windows\Subject index.genruntimeconfig.cache
+C:\Users\peten\OneDrive\Рабочий стол\Kazinak\Kazino\Subject index\Subject index\obj\Debug\net8.0-windows\ref\Subject index.dll
