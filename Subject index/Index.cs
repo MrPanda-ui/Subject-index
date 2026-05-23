@@ -12,6 +12,15 @@ namespace Subject_index
     {
         public List<IndexEntry> entries = new List<IndexEntry>();
         //метод добавление нового слова с указанием страницы
+        public IndexEntry FindEntry(string word)
+        {
+            foreach (var item in entries)
+            {
+                if (item.Word == word)
+                    return item;
+            }
+            return null;
+        }
         public void Addword(string word, int page)
         {
             IndexEntry entry = null;
@@ -35,19 +44,28 @@ namespace Subject_index
             }
         }
         // метод удаление слова
-        public void Removeword(string word) {
-            IndexEntry entry = null;
-            foreach (var item in entries)
+        public bool RemoveWord(string word)
+        {
+            IndexEntry entry = FindEntry(word);
+
+            if (entry != null)
             {
-                if (item.Word == word)
-                {
-                    entry = item;
-                    break;
-                }
-            }
-            if (entry != null) { 
                 entries.Remove(entry);
+                return true;
             }
+
+            return false;
+        }
+        public bool RemovePage(string word, int page)
+        {
+            IndexEntry entry = FindEntry(word);
+
+            if (entry != null)
+            {
+                return entry.RemovePage(page);
+            }
+
+            return false;
         }
         //метод сохранение данных в .txt файл для зпедактирования
         public void SaveToFile(string filename)
