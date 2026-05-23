@@ -41,6 +41,8 @@
             textBox3 = new TextBox();
             button5 = new Button();
             button6 = new Button();
+            button7 = new Button();
+            button8 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -161,11 +163,33 @@
             button6.UseVisualStyleBackColor = true;
             button6.Click += button4_Click;
             // 
+            // button7
+            // 
+            button7.Location = new Point(179, 424);
+            button7.Name = "button7";
+            button7.Size = new Size(157, 51);
+            button7.TabIndex = 7;
+            button7.Text = "Удалить слово";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button5_Click;
+            // 
+            // button8
+            // 
+            button8.Location = new Point(179, 481);
+            button8.Name = "button8";
+            button8.Size = new Size(157, 51);
+            button8.TabIndex = 7;
+            button8.Text = "Удалить страницу";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button5_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 704);
+            Controls.Add(button8);
+            Controls.Add(button7);
             Controls.Add(button5);
             Controls.Add(button6);
             Controls.Add(button4);
@@ -200,5 +224,7 @@
         private TextBox textBox3;
         private Button button5;
         private Button button6;
+        private Button button7;
+        private Button button8;
     }
 }

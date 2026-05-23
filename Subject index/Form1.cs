@@ -36,8 +36,97 @@ namespace Subject_index
         /// 2 метода удаления:
         /// 1. удаление только странниц
         /// 2. удаление всего слова
+        
         ///<summary>
+        ///метод удаление странницы слова
+        /// </summary>
+        private void btnDeletePage_Click(object sender, EventArgs e)
+        {
+            // Проверяем, выбрана ли строка
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Выберите слово", "Внимание");
+                return;
+            }
 
+            // Получаем выбранное слово
+            string word = dataGridView1.SelectedRows[0].Cells["Word"].Value.ToString();
+
+            // Получаем текущие страницы
+            var entry = index.FindEntry(word);
+            if (entry == null || entry.pages.Count == 0)
+            {
+                MessageBox.Show("У этого слова нет страниц для удаления", "Внимание");
+                return;
+            }
+
+            // Формируем список страниц для выбора
+            string pagesList = string.Join(", ", entry.pages);
+            string pageToDelete = Microsoft.VisualBasic.Interaction.InputBox(
+                $"Слово: {word}\nТекущие страницы: {pagesList}\n\nВведите номер страницы для удаления:",
+                "Удаление страницы",
+                ""
+            );
+
+            if (int.TryParse(pageToDelete, out int page))
+            {
+                bool success = index.RemovePage(word, page);
+
+                if (success)
+                {
+                    RefreshDataGridView();  // обновляем таблицу
+                    MessageBox.Show($"Страница {page} удалена из слова \"{word}\"", "Успех");
+                }
+                else
+                {
+                    MessageBox.Show($"Страница {page} не найдена у слова \"{word}\"", "Ошибка");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Введите корректный номер страницы", "Ошибка");
+            }
+        }
+        /// <summary>
+        /// метод удаление всего слова 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnDeleteWord_Click(object sender, EventArgs e)
+        {
+            // Проверяем, выбрана ли строка
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Выберите слово для удаления", "Внимание");
+                return;
+            }
+
+            // Получаем выбранное слово
+            string word = dataGridView1.SelectedRows[0].Cells["Word"].Value.ToString();
+
+            // Подтверждение удаления
+            DialogResult result = MessageBox.Show(
+                $"Удалить слово \"{word}\" из указателя?",
+                "Подтверждение",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                bool success = index.RemoveWord(word);
+
+                if (success)
+                {
+                    RefreshDataGridView();  // обновляем таблицу
+                    MessageBox.Show($"Слово \"{word}\" удалено", "Успех");
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка при удалении", "Ошибка");
+                }
+            }
+        }
         /// <summary>
         /// проверка сохранен ли проект перед загрытием
         /// </summary>
@@ -356,6 +445,16 @@ namespace Subject_index
 
             textToPrint = PreparePrintText();
             printPreviewDialog.ShowDialog();
+        }
+        //кнопка ужадить странницу
+        private void button8_Click(object sender, EventArgs e)
+        {
+            btnDeletePage_Click(sender, e);
+        }
+        //кнопка удалить слово
+        private void button7_Click(object sender, EventArgs e)
+        {
+            btnDeleteWord_Click(sender, e);
         }
         //кнопка обновления
         private void button5_Click(object sender, EventArgs e)
